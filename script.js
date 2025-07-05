@@ -81,7 +81,7 @@ if (!SpeechRecognition) {
     tasks.forEach(task => addTaskToUI(task));
   }
 }
-// Theme Toggle Logic
+// Mode Logic
 const toggleBtn = document.getElementById("theme-toggle");
 toggleBtn.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
