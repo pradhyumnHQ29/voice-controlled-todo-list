@@ -1,0 +1,116 @@
+
+/* Authored by: Pradhyumn Gupta
+   Date: 05/07/2025
+
+   */
+   
+:root {
+  --bg-color: #f0f2f5;
+  --text-color: #333;
+  --box-color: #fff;
+  --btn-color: #4caf50;
+  --btn-hover: #388e3c;
+  --task-bg: #e0e0e0;
+}
+
+.dark-mode {
+  --bg-color: #1e1e1e;
+  --text-color: #f5f5f5;
+  --box-color: #2c2c2c;
+  --btn-color: #6a1b9a;
+  --btn-hover: #4a148c;
+  --task-bg: #424242;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text-color);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  background: var(--box-color);
+  padding: 30px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 95%;
+  max-width: 450px;
+  transition: background 0.3s;
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+#taskList {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+#taskList li {
+  background-color: var(--task-bg);
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+#start-btn,
+#theme-toggle {
+  padding: 15px 20px;
+  font-size: 1rem;
+  background-color: var(--btn-color);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px 5px;
+  width: 90%;
+  max-width: 300px;
+  transition: background 0.3s;
+}
+
+#start-btn:hover,
+#theme-toggle:hover {
+  background-color: var(--btn-hover);
+}
+
+.note {
+  font-size: 0.95rem;
+  margin-top: 15px;
+  color: var(--text-color);
+}
+
+/* 🔁 Mobile Responsive Tweaks */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #start-btn,
+  #theme-toggle {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  #taskList li {
+    font-size: 1rem;
+  }
+}
