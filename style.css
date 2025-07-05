@@ -98,7 +98,7 @@ h1 {
   color: var(--text-color);
 }
 
-/* 🔁 Mobile Responsive Tweaks */
+/*  Mobile Responsive  */
 @media (max-width: 500px) {
   h1 {
     font-size: 1.5rem;
